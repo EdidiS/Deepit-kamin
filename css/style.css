@@ -2,7 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* scroll-padding: 10rem; */
     font-family: var(--tiktok);
+}
+
+section.section-4 {
+    overflow-x: hidden;
+}
+
+html {
+    scrollbar-color: var(--black) var(--white);
+}
+
+@keyframes appear {
+    from {
+        /* opacity: 0; */
+        transition: tranform .5s;
+        transform: translateY(100%);
+        /* transition: .5s ease-in-out; */
+    }
+
+    to {
+        /* opacity: 1; */
+        transition: tranform .5s;
+        transform: translateY(0%);
+        /* transition: .5s ease-in-out; */
+    }
+}
+
+div,
+p {
+    animation: appear linear;
+    animation-timeline: view();
+    transition: .5s ease-in-out;
+    animation-range: entry 0% cover 20%;
 }
 
 /* saved info used in docs */
@@ -31,11 +65,13 @@ img {
     width: 100%;
 }
 
-nav{
-    padding: 2rem 8%;
+nav {
+    padding: 0 8%;
 }
+
 section {
     padding: 8% 8%;
+    transition: 3s;
 }
 
 section>h3 {
@@ -43,9 +79,11 @@ section>h3 {
     font-weight: 600;
     margin-bottom: 1rem;
 }
-h2{
+
+h2 {
     font-size: 4vmin;
 }
+
 p {
     font-size: 2.5vmin;
 }
@@ -66,6 +104,7 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
+
 /* logo styling */
 nav>a {
     width: 30vmin;
@@ -79,19 +118,22 @@ nav ul {
 }
 
 nav ul li {
-    /* padding: 1rem 0; */
     border-bottom: 2px solid transparent;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 nav ul li a {
     text-decoration: none;
     font-size: 2.5vmin;
+    padding-top: 3rem;
+    padding-bottom: 2.9rem;
     font-weight: 600;
     color: black;
 }
 
 nav ul a:hover {
-    border-bottom: 4px solid var(--green);
+    border-bottom: 5px solid var(--black);
     color: black;
 }
 
@@ -105,10 +147,14 @@ section.hero {
     top: 4.007rem;
     position: relative;
     padding: 10% 8% 13% 8%;
+    background-image: url(../Asset/Images/10860282.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 section.hero h1 {
-    font-size: 5vmin;
+    font-size: 6vmin;
 }
 
 section.hero>div {
@@ -118,20 +164,26 @@ section.hero>div {
     width: 50%;
 }
 
-section.hero>div>div {
+section.hero>div>div,
+.footer .flex-3 div {
     display: flex;
     gap: 0.5rem;
 }
 
-section.hero>div>div a i {
+section.hero>div>div a i,
+.footer .flex-3 div a i {
     color: var(--white);
     font-size: 2.5vmin;
 }
 
-section.hero>div>div i:hover {
+section.hero>div>div i:hover,
+.footer .flex-3 div i:hover {
     color: var(--yellow);
 }
-section.hero>div>div a{
+
+section.hero>div>div a,
+div.icon a,
+.footer .flex-3 div a {
     background-color: black;
     width: 5vmin;
     height: 5vmin;
@@ -140,24 +192,27 @@ section.hero>div>div a{
     justify-content: center;
     align-items: center;
 }
-section.hero img{
+
+section.hero img {
     display: none;
 }
 
 /* section-2 styling */
-section.section-2{
-    background-color: black;
+section.section-2 {
+    background-color: var(--black);
     color: var(--white);
 }
-section.section-2 > div{
+
+section.section-2>div {
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(350px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     gap: 2.5rem;
     margin-top: 1rem;
 }
-section.section-2 > div div{
+
+section.section-2>div div {
     padding: 20% 10%;
-    background-color: rgb(17, 17, 17);
+    background-color: black;
     text-align: center;
     border-radius: 15px;
     color: var(--white);
@@ -165,31 +220,384 @@ section.section-2 > div div{
     flex-direction: column;
     gap: 1.5rem;
 }
-section.section-2 > div div i{
+
+section.section-2>div div i {
     font-size: 5vmin;
     color: var(--green);
 }
-section.section-2 > div div p{
+
+section.section-2>div div p {
     color: rgb(202, 202, 202);
 }
-section.section-2 > div div a{
+
+section.section-2>div div a {
     color: var(--green);
+    font-size: 2.5vmin;
+    font-weight: 600;
     text-decoration: underline;
 }
-section.section-2 > div div a:hover{
+
+section.section-2>div div a:hover {
     color: var(--yellow);
 }
 
+/* section-3 styling */
+.section-3>div div {
+    height: 70vmin;
+}
+
+.section-3>div div:nth-child(1) {
+    background-image: url(../Asset/Images/IMG-20250715-WA0143.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-3>div div:nth-child(2) {
+    background-image: url(../Asset/Images/IMG-20250715-WA0144.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-3>div div:nth-child(3) {
+    background-image: url(../Asset/Images/IMG-20250715-WA0145.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-3>div div:nth-child(4) {
+    background-image: url(../Asset/Images/IMG-20250718-WA0061.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-3>div div:nth-child(5) {
+    background-image: url(../Asset/Images/IMG-20250718-WA0062~2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-3>div div:nth-child(6) {
+    background-image: url(../Asset/Images/IMG-20250718-WA0067.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* section-4 styling */
+section.section-4 {
+    background-color: var(--white);
+    padding: 8% 0;
+}
+
+section.section-4 h3 {
+    padding-left: 8%;
+}
+
+section.section-4>div {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    gap: 20%;
+    /* overflow-x: hidden; */
+    scrollbar-color: transparent transparent;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory !important;
+}
+
+section.section-4 {
+    anchor-name: --myCarousel;
+}
+
+section.section-4::scroll-button(*) {
+    position: absolute;
+    position-anchor: --myCarousel;
+}
+
+section.section-4::scroll-button(left) {
+    right: calc(anchor(left) - 70px);
+    bottom: calc(anchor(top) + 13px);
+}
+
+section.section-4::scroll-button(right) {
+    left: calc(anchor(right) - 70px);
+    bottom: calc(anchor(top) + 13px);
+}
+
+section.section-4 {
+    scroll-marker-group: after;
+}
+
+section.section-4::scroll-marker-group {
+    position: absolute;
+    position-anchor: --myCarousel;
+    top: calc(anchor(bottom) - 70px);
+    justify-self: anchor-center;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+
+section.section-4>div .carousel {
+    width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+}
+
+section.section-4>div .carousel::scroll-marker {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+section.section-4>div .carousel::scroll-marker:target-current {
+    background-color: black;
+}
+
+
+section.section-4>div .carousel>div {
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+section.section-4>div .carousel:nth-child(1) .review-image {
+    width: 100%;
+    height: 60vh;
+    background-image: url(../Asset/Images/black-man-posing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    background-position: center;
+    border-radius: 30px;
+}
+section.section-4>div .carousel:nth-child(2) .review-image {
+    width: 100%;
+    height: 60vh;
+    background-image: url(../Asset/Images/close-up-vertical-image-smiling-african-man-looking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    background-position: center;
+    border-radius: 30px;
+}
+section.section-4>div .carousel:nth-child(3) .review-image {
+    width: 100%;
+    height: 60vh;
+    background-image: url(../Asset/Images/african-teenage-girl-portrait-happy-smiling-face.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* flex: 1; */
+    background-position: center;
+    border-radius: 30px;
+}
+
+section.section-4>div .review-info {
+    display: flex;
+    /* flex: 1.5; */
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section.section-4>div .review-info div {
+    display: flex;
+    gap: 0.3rem;
+}
+
+section.section-4>div .review-info div i {
+    font-size: 2.5vmin;
+    gap: 2rem;
+}
+
+/* section-5 styling*/
+section.section-5>div {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+section.section-5>div .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section.section-5>div .contact-info h2 {
+    font-size: 6vmin;
+}
+
+label,
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    color: var(--black);
+    /* display: block; */
+}
+
+label {
+    font-size: 2.4vmin;
+    font-weight: 500;
+}
+
+section.section-5 input,
+section.section-5 select,
+section.section-5 textarea,
+section.section-5 button {
+    margin-top: 0.7vmin;
+    padding: 2.5vmin;
+    margin-bottom: 4vmin;
+    outline: none;
+    font-size: 2vmin;
+    border: 2px solid rgb(144, 144, 144);
+    border-radius: 10px;
+}
+
+section.section-5 input::placeholder,
+section.section-5 textarea::placeholder,
+option {
+    color: rgb(144, 144, 144);
+    transition: 0.4s;
+}
+
+section.section-5 button {
+    border: none;
+    background: black;
+    color: var(--white);
+    transition: all 0.6s ease-in-out;
+    font-weight: 600;
+    font-size: 2.5vmin;
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+section.section-5 button:hover {
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    transition: all 0.6s ease-in-out;
+}
+
+/* footer */
+.footer {
+    background: var(--white);
+}
+
+.footer>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer>div .footer-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+}
+
+.footer>div .flex-2 h4 {
+    margin-bottom: 1vmin;
+}
+
+.footer>div .flex-3 {
+    gap: 4vmin;
+}
+
+.footer>div .flex-1 a {
+    width: 30vmin;
+    z-index: 1000;
+}
+
+.footer>div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer>div ul li a {
+    text-decoration: none;
+    font-size: 2.5vmin;
+    /* font-weight: 600; */
+    color: black;
+}
+
+.footer>div ul a:hover {
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 2.5vmin;
+}
+
+.copyright {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* .footer > div .flex-1 a{
+    width: 10vmin;
+} */
 /* Responsiveness */
+@media(max-width:1024px) {
+    section.hero {
+        background-size: 55%;
+    }
+
+    section.hero h1 {
+        font-size: 5.5vmin;
+    }
+
+    div,
+    p {
+        animation: appear linear;
+        animation-timeline: view();
+        transition: .5s ease-in-out;
+        animation-range: entry 0% cover 10%;
+    }
+
+}
+
 @media(max-width:992px) {
-.large-screen-nav {
+    nav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .large-screen-nav {
         display: none;
     }
 
     .small-screen-nav {
         display: block;
     }
-
+    nav ul li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+nav>a{
+width: 40vmin;}
     /* Navbar menu styling */
     .navbar-menu {
         z-index: 1;
@@ -222,7 +630,7 @@ section.section-2 > div div a:hover{
     }
 
     .navbar-toggle i {
-        font-size: 4.2vmin;
+        font-size: 5vmin;
         font-weight: 600;
         color: black;
     }
@@ -230,13 +638,45 @@ section.section-2 > div div a:hover{
     .navbar-toggle .fa-xmark {
         display: none;
     }
-
-    .active {
-        display: block;
+    .un-active {
+        display: none !important;
+    }.active {
+        display: block !important;
     }
 
-    .un-active {
-        display: none;
+    /* s */
+    section.section-2>div {
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    }
+
+    /* review media queries and form*/
+    section.section-4>div,
+    section.section-5>div {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    section.section-4>div {
+        padding: 10% 0;
+    }
+
+    section.section-4>div .carousel>div {
+        gap: 2rem;
+    }
+}
+
+@media(max-width:900px) {
+    section.hero {
+        background-image: none;
+    }
+
+    section.hero>div {
+        width: 100%;
+    }
+
+    section.hero img {
+        display: block;
+
     }
 }
 
@@ -248,26 +688,150 @@ section.section-2 > div div a:hover{
     }
 }
 
+@media(max-width:643px) {
+    section.hero>div {
+        width: 100%;
+    }
+    section{
+        padding: 12% 8%;
+    }
+    nav>a{
+width: 40vmin;}
+        .navbar-toggle i {
+        font-size: 6vmin;
+    }
+
+
+    section.section-4>div,
+    section.section-5>div {
+        grid-template-columns: 1fr;
+    }
+
+    div,
+    p {
+        animation: appear linear;
+        animation-timeline: view();
+        transition: .5s ease-in-out;
+        animation-range: entry 0% cover 5%;
+    }
+
+    section.hero h1,
+    section.hero p {
+        text-align: justify;
+        text-justify: auto;
+    }
+
+    section.hero h1,
+    section.section-2>div div i,
+    section.section-5>div .contact-info h2 {
+        font-size: 7vmin;
+    }
+
+    section>h3 {
+        font-size: 3.3vmin;
+    }
+
+    h2 {
+        font-size: 6vmin;
+    }
+
+    p,
+    section.hero>div>div a i,
+    .footer .flex-3 div a i,
+    section.section-2>div div a,
+    h4 {
+        font-size: 3.4vmin !important;
+    }
+
+    .footer>div ul li a,
+    nav ul li a {
+        font-size: 3.5vmin;
+    }
+
+    label {
+        font-size: 3.3vmin !important;
+    }
+
+    section.section-5 input,
+    section.section-5 select,
+    section.section-5 textarea,
+    section.section-5 button {
+        font-size: 2.9vmin;
+    }
+
+    section.hero>div>div a,
+    div.icon a,
+    .footer .flex-3 div a {
+        width: 6.5vmin;
+        height: 6.5vmin;
+    }
+
+    section.section-4>div .carousel>div {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media(max-width:425px) {
     section.hero>div {
         width: 100%;
         gap: 0.5rem;
     }
-    section.hero img{
-        display: block;
-        margin-top: 1rem;
-    }
-    section.section-2 > div{
-    grid-template-columns:repeat(auto-fit, minmax(200px, auto));
-    }
-}
 
-/* @media(max-width:300px){ */
-/* phone styling */
-/* nav > a{
-width: 50vmin;
-z-index: 1000;
-}
-        nav ul li a {
-            font-size: 4vmin;}
-    } */
+    section.section-2>div {
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    }
+
+    section.hero h1,
+    section.section-2>div div i,
+    section.section-5>div .contact-info h2 {
+        font-size: 9.5vmin;
+    }
+
+    section.hero>div {
+        gap: 1.7rem;
+    }
+
+    section>h3 {
+        font-size: 5vmin;
+    }
+
+    h2 {
+        font-size: 8.8vmin;
+    }
+
+    p,
+    section.hero>div>div a i,
+    .footer .flex-3 div a i,
+    section.section-2>div div a,
+    h4 {
+        font-size: 5.2vmin !important;
+    }
+
+    .footer>div ul li a,
+    nav ul li a {
+        font-size: 5vmin;
+    }
+
+    label {
+        font-size: 4vmin !important;
+    }
+
+    section.section-5 input,
+    section.section-5 select,
+    section.section-5 textarea,
+    section.section-5 button {
+        font-size: 3.5vmin;
+    }
+
+    section.hero>div>div a,
+    div.icon a,
+    .footer .flex-3 div a {
+        width: 9vmin;
+        height: 9vmin;
+    }
+    section.section-4>div {
+        padding: 20% 0;
+    }
+    section.section-2>div div {
+    padding: 10% 0;
+}}

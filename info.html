@@ -1,25 +1,57 @@
-<!-- Things to get ready and to the info docs -->
-     <!-- Add small icon image before the title -->
-      <!-- Add the icons social media font link -->
-       <i class="fa-regular fa-envelope"></i>
-       <i class="fa-brands fa-facebook-f"></i>
-       <i class="fa-brands fa-instagram"></i>
-       <i class="fa-brands fa-whatsapp"></i>
-       <i class="fa-solid fa-phone"></i>
-      <!-- Add the icons for service page link -->
-       <i class="fa-brands fa-unity"></i>
-       <i class="fa-solid fa-bars-staggered"></i>
-       <i class="fa-brands fa-webflow"></i>
-       <i class="fa-brands fa-shopify"></i>
-       <i class="fa-solid fa-store"></i>
-       <i class="fa-regular fa-note-sticky"></i>
-       <i class="fa-regular fa-clipboard"></i>
-       <i class="fa-regular fa-face-grin-tears"></i>
-       <i class="fa-regular fa-map"></i>
-       <i class="fa-regular fa-comment-dots"></i>
-       <i class="fa-regular fa-comments"></i>
-       <!-- Save colors pallette -->
-        96FF8E--green
-        FFF541--yellow
-        000000--black
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          ul {
+  width: 100vw;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+}
+li {
+  list-style-type: none;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  padding: 20px;
+
+  flex: 0 0 100%;
+}
+li {
+  scroll-snap-align: center;
+}
+
+ul {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+
+li:nth-child(even) {
+  background-color: cyan;
+}
+
+     </style>
+</head>
+<body>
+     <h1>CSS carousel single item per page</h1>
+<ul>
+  <li>
+    <h2>Page 1</h2>
+  </li>
+  <li>
+    <h2>Page 2</h2>
+  </li>
+  <li>
+    <h2>Page 3</h2>
+  </li>
+  <li>
+    <h2>Page 4</h2>
+  </li>
+</ul>
+
+</body>
+</html>

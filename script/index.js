@@ -1,14 +1,15 @@
 // Header Scroll Color Changee
-let hamburgerIcon = document.querySelector('.navbar-toggle .fa-bars');
-let closeIcon = document.querySelector('.navbar-toggle .fa-xmark');
+let hamburgerIcon = document.querySelector('.fa-bars');
+let closeIcon = document.querySelector('.fa-xmark');
 let navbarMenu = document.querySelector('.navbar-menu');
+let navbarToggle = document.querySelector('.navbar-toggle');
 // let navbar = document.querySelector('#nav');
 
 
-hamburgerIcon.addEventListener('click', function () {
+navbarToggle.addEventListener('click', function () {
     navbarMenu.classList.toggle('active-toggle');
-    // hamburgerIcon.classList.toggle('un-active');
-    // closeIcon.classList.toggle('active');
+    hamburgerIcon.classList.toggle('un-active');
+    closeIcon.classList.toggle('active');
 })
 // window.addEventListener('scroll', () => {
 //     nav.classList.toggle('shadow', window.scrollY > 0);
