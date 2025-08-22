@@ -4,7 +4,26 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     /* scroll-padding: 10rem; */
-    font-family: var(--tiktok);
+    font-family: montserrat;
+    font-weight: 500;
+}
+h1,h2,h3,h4,h5,h6,span{
+    font-family: acorn-bold;
+}
+span{
+    padding: 4rem 0;
+    background-image: url(../Asset/Images/vecteezy_vibrant-mustard-splat-on-a-clean-transparent-background_55450369.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@font-face{
+    font-family: acorn-bold;
+    src: url(../acorn/Acorn/Acorn-Bold.otf);
+}
+@font-face{
+    font-family: acorn-regular;
+    src: url(../acorn/Acorn/Acorn-Regular.otf);
 }
 
 section.section-4 {
@@ -15,37 +34,15 @@ html {
     scrollbar-color: var(--black) var(--white);
 }
 
-@keyframes appear {
-    from {
-        /* opacity: 0; */
-        transition: tranform .5s;
-        transform: translateY(100%);
-        /* transition: .5s ease-in-out; */
-    }
-
-    to {
-        /* opacity: 1; */
-        transition: tranform .5s;
-        transform: translateY(0%);
-        /* transition: .5s ease-in-out; */
-    }
-}
-
-div,
-p {
-    animation: appear linear;
-    animation-timeline: view();
-    transition: .5s ease-in-out;
-    animation-range: entry 0% cover 20%;
-}
-
 /* saved info used in docs */
 :root {
     /* colors */
     --green: #96FF8E;
-    --yellow: #FFF541;
-    --black: #000000;
-    --white: #f1f1f1;
+    --yellow: rgb(255, 249, 136);
+    --yellow-bg: rgba(255, 249, 136,0.5);
+    --black: rgb(23, 23, 23);
+    --white: rgb(248, 248, 248);
+    --orange: orangered;
     /* Fonts */
     --tiktok: "TikTok Sans", sans-serif;
 }
@@ -75,7 +72,7 @@ section {
 }
 
 section>h3 {
-    font-size: 2.4vmin;
+    font-size: 3.5vmin;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -85,7 +82,7 @@ h2 {
 }
 
 p {
-    font-size: 2.5vmin;
+    font-size: 2.6vmin;
 }
 
 header {
@@ -98,6 +95,7 @@ nav {
     display: flex;
     width: 100%;
     top: 0;
+    color: var(--black);
     z-index: 1;
     position: fixed;
     background-color: var(--white);
@@ -129,12 +127,12 @@ nav ul li a {
     padding-top: 3rem;
     padding-bottom: 2.9rem;
     font-weight: 600;
-    color: black;
+    color: var(--black);
 }
 
 nav ul a:hover {
     border-bottom: 5px solid var(--black);
-    color: black;
+    color:var(--black);
 }
 
 .small-screen-nav,
@@ -146,15 +144,16 @@ nav ul a:hover {
 section.hero {
     top: 4.007rem;
     position: relative;
-    padding: 10% 8% 13% 8%;
-    background-image: url(../Asset/Images/10860282.png);
+    padding: 10% 8% 15% 8%;
+    background-image: url(../Asset/Images/vecteezy_vibrant-rainbow-paint-explosion-colorful-splashes-liquid_59048174.png);
     background-size: contain;
-    background-position: right;
+    background-position:right;
+    color: var(--black);
     background-repeat: no-repeat;
 }
 
 section.hero h1 {
-    font-size: 6vmin;
+    font-size: 8vmin;
 }
 
 section.hero>div {
@@ -184,7 +183,7 @@ section.hero>div>div i:hover,
 section.hero>div>div a,
 div.icon a,
 .footer .flex-3 div a {
-    background-color: black;
+    background-color: var(--black);
     width: 5vmin;
     height: 5vmin;
     border-radius: 50%;
@@ -199,8 +198,8 @@ section.hero img {
 
 /* section-2 styling */
 section.section-2 {
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--yellow-bg);
+    color: var(--black);
 }
 
 section.section-2>div {
@@ -212,7 +211,7 @@ section.section-2>div {
 
 section.section-2>div div {
     padding: 20% 10%;
-    background-color: black;
+    background-color:var(--black);
     text-align: center;
     border-radius: 15px;
     color: var(--white);
@@ -223,7 +222,7 @@ section.section-2>div div {
 
 section.section-2>div div i {
     font-size: 5vmin;
-    color: var(--green);
+    color: var(--yellow);
 }
 
 section.section-2>div div p {
@@ -231,10 +230,16 @@ section.section-2>div div p {
 }
 
 section.section-2>div div a {
-    color: var(--green);
+    color: var(--yellow);
     font-size: 2.5vmin;
     font-weight: 600;
-    text-decoration: underline;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 2px solid var(--yellow);
+    border-radius: 50px;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
 }
 
 section.section-2>div div a:hover {
@@ -242,47 +247,53 @@ section.section-2>div div a:hover {
 }
 
 /* section-3 styling */
+
 .section-3>div div {
     height: 70vmin;
+    border-radius: 20px;
+    box-shadow: 0px 2px 13px rgba(0,0,0,0.5);
 }
-
+section#portfolio{
+    background-color: var(--white);
+    color: var(--white);
+}
 .section-3>div div:nth-child(1) {
-    background-image: url(../Asset/Images/IMG-20250715-WA0143.jpg);
+    background-image:url(../Asset/Images/IMG-20250715-WA0143.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(2) {
-    background-image: url(../Asset/Images/IMG-20250715-WA0144.jpg);
+    background-image:url(../Asset/Images/IMG-20250715-WA0144.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(3) {
-    background-image: url(../Asset/Images/IMG-20250715-WA0145.jpg);
+    background-image:url(../Asset/Images/IMG-20250715-WA0145.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(4) {
-    background-image: url(../Asset/Images/IMG-20250718-WA0061.jpg);
+    background-image:url(../Asset/Images/IMG-20250718-WA0061.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(5) {
-    background-image: url(../Asset/Images/IMG-20250718-WA0062~2.jpg);
+    background-image:url(../Asset/Images/IMG-20250718-WA0062~2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(6) {
-    background-image: url(../Asset/Images/IMG-20250718-WA0067.jpg);
+    background-image:url(../Asset/Images/IMG-20250718-WA0067.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -358,12 +369,12 @@ section.section-4>div .carousel::scroll-marker {
     width: 16px;
     height: 16px;
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid var(--black);
     border-radius: 50%;
 }
 
 section.section-4>div .carousel::scroll-marker:target-current {
-    background-color: black;
+    background-color: var(--black);
 }
 
 
@@ -426,6 +437,9 @@ section.section-4>div .review-info div i {
 }
 
 /* section-5 styling*/
+section.section-5{
+    background-color: var(--yellow-bg);
+}
 section.section-5>div {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -480,7 +494,7 @@ option {
 
 section.section-5 button {
     border: none;
-    background: black;
+    background: var(--black);
     color: var(--white);
     transition: all 0.6s ease-in-out;
     font-weight: 600;
@@ -491,8 +505,8 @@ section.section-5 button {
 
 section.section-5 button:hover {
     background-color: transparent;
-    color: black;
-    border: 3px solid black;
+    color: var(--black);
+    border: 3px solid var(--black);
     transition: all 0.6s ease-in-out;
 }
 
@@ -538,7 +552,7 @@ section.section-5 button:hover {
     text-decoration: none;
     font-size: 2.5vmin;
     /* font-weight: 600; */
-    color: black;
+    color: var(--black);
 }
 
 .footer>div ul a:hover {
@@ -563,18 +577,6 @@ h4 {
 @media(max-width:1024px) {
     section.hero {
         background-size: 55%;
-    }
-
-    section.hero h1 {
-        font-size: 5.5vmin;
-    }
-
-    div,
-    p {
-        animation: appear linear;
-        animation-timeline: view();
-        transition: .5s ease-in-out;
-        animation-range: entry 0% cover 10%;
     }
 
 }
@@ -632,7 +634,7 @@ width: 40vmin;}
     .navbar-toggle i {
         font-size: 5vmin;
         font-weight: 600;
-        color: black;
+        color: var(--black);
     }
 
     .navbar-toggle .fa-xmark {
@@ -707,56 +709,10 @@ width: 40vmin;}
         grid-template-columns: 1fr;
     }
 
-    div,
-    p {
-        animation: appear linear;
-        animation-timeline: view();
-        transition: .5s ease-in-out;
-        animation-range: entry 0% cover 5%;
-    }
-
     section.hero h1,
     section.hero p {
         text-align: justify;
         text-justify: auto;
-    }
-
-    section.hero h1,
-    section.section-2>div div i,
-    section.section-5>div .contact-info h2 {
-        font-size: 7vmin;
-    }
-
-    section>h3 {
-        font-size: 3.3vmin;
-    }
-
-    h2 {
-        font-size: 6vmin;
-    }
-
-    p,
-    section.hero>div>div a i,
-    .footer .flex-3 div a i,
-    section.section-2>div div a,
-    h4 {
-        font-size: 3.4vmin !important;
-    }
-
-    .footer>div ul li a,
-    nav ul li a {
-        font-size: 3.5vmin;
-    }
-
-    label {
-        font-size: 3.3vmin !important;
-    }
-
-    section.section-5 input,
-    section.section-5 select,
-    section.section-5 textarea,
-    section.section-5 button {
-        font-size: 2.9vmin;
     }
 
     section.hero>div>div a,
@@ -781,46 +737,8 @@ width: 40vmin;}
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     }
 
-    section.hero h1,
-    section.section-2>div div i,
-    section.section-5>div .contact-info h2 {
-        font-size: 9.5vmin;
-    }
-
     section.hero>div {
         gap: 1.7rem;
-    }
-
-    section>h3 {
-        font-size: 5vmin;
-    }
-
-    h2 {
-        font-size: 8.8vmin;
-    }
-
-    p,
-    section.hero>div>div a i,
-    .footer .flex-3 div a i,
-    section.section-2>div div a,
-    h4 {
-        font-size: 5.2vmin !important;
-    }
-
-    .footer>div ul li a,
-    nav ul li a {
-        font-size: 5vmin;
-    }
-
-    label {
-        font-size: 4vmin !important;
-    }
-
-    section.section-5 input,
-    section.section-5 select,
-    section.section-5 textarea,
-    section.section-5 button {
-        font-size: 3.5vmin;
     }
 
     section.hero>div>div a,
@@ -832,6 +750,4 @@ width: 40vmin;}
     section.section-4>div {
         padding: 20% 0;
     }
-    section.section-2>div div {
-    padding: 10% 0;
-}}
+}
