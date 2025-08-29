@@ -7,21 +7,31 @@
     font-family: montserrat;
     font-weight: 500;
 }
-h1,h2,h3,h4,h5,h6,span{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
     font-family: acorn-bold;
 }
-span{
+
+span {
     padding: 4rem 0;
-    background-image: url(../Asset/Images/vecteezy_vibrant-mustard-splat-on-a-clean-transparent-background_55450369.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../Asset/Images/vecteezy_vibrant-mustard-splat-on-a-clean-transparent-background_55450369.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-@font-face{
+
+@font-face {
     font-family: acorn-bold;
     src: url(../acorn/Acorn/Acorn-Bold.otf);
 }
-@font-face{
+
+@font-face {
     font-family: acorn-regular;
     src: url(../acorn/Acorn/Acorn-Regular.otf);
 }
@@ -39,7 +49,7 @@ html {
     /* colors */
     --green: #96FF8E;
     --yellow: rgb(255, 249, 136);
-    --yellow-bg: rgba(255, 249, 136,0.5);
+    --yellow-bg: rgba(255, 249, 136, 0.5);
     --black: rgb(23, 23, 23);
     --white: rgb(248, 248, 248);
     --orange: orangered;
@@ -87,8 +97,16 @@ p {
 
 header {
     background-color: var(--white);
+    background-image: url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     /* height: 100vh; */
 }
+
+/* .hero-curve {
+    background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0 0v4s250 96 500 96 500-96 500-96V0H0Z" fill="%23000"></path></svg>')
+} */
 
 /* nav styling */
 nav {
@@ -98,7 +116,10 @@ nav {
     color: var(--black);
     z-index: 1;
     position: fixed;
-    background-color: var(--white);
+    background-image: url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     align-items: center;
     justify-content: space-between;
 }
@@ -127,12 +148,12 @@ nav ul li a {
     padding-top: 3rem;
     padding-bottom: 2.9rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--white);
 }
 
 nav ul a:hover {
-    border-bottom: 5px solid var(--black);
-    color:var(--black);
+    border-bottom: 5px solid var(--white);
+    color: var(--white);
 }
 
 .small-screen-nav,
@@ -147,8 +168,8 @@ section.hero {
     padding: 10% 8% 15% 8%;
     background-image: url(../Asset/Images/vecteezy_vibrant-rainbow-paint-explosion-colorful-splashes-liquid_59048174.png);
     background-size: contain;
-    background-position:right;
-    color: var(--black);
+    background-position: right;
+    color: var(--white);
     background-repeat: no-repeat;
 }
 
@@ -200,6 +221,10 @@ section.hero img {
 section.section-2 {
     background-color: var(--yellow-bg);
     color: var(--black);
+    background-image: url(../Asset/Images/avinash-kumar-Yr146Eua_mM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 section.section-2>div {
@@ -211,7 +236,11 @@ section.section-2>div {
 
 section.section-2>div div {
     padding: 20% 10%;
-    background-color:var(--black);
+    background-color: var(--black);
+    background-image: url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
     border-radius: 15px;
     color: var(--white);
@@ -243,7 +272,7 @@ section.section-2>div div a {
 }
 
 section.section-2>div div a:hover {
-    color: var(--yellow);
+    color: var(--white);
 }
 
 /* section-3 styling */
@@ -251,49 +280,55 @@ section.section-2>div div a:hover {
 .section-3>div div {
     height: 70vmin;
     border-radius: 20px;
-    box-shadow: 0px 2px 13px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.5);
 }
-section#portfolio{
+
+section#portfolio {
     background-color: var(--white);
+    background-image: url(../Asset/Images/peter-gargiulo-cGNCepznaV8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--white);
 }
+
 .section-3>div div:nth-child(1) {
-    background-image:url(../Asset/Images/IMG-20250715-WA0143.jpg);
+    background-image: url(../Asset/Images/IMG-20250715-WA0143.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(2) {
-    background-image:url(../Asset/Images/IMG-20250715-WA0144.jpg);
+    background-image: url(../Asset/Images/IMG-20250715-WA0144.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(3) {
-    background-image:url(../Asset/Images/IMG-20250715-WA0145.jpg);
+    background-image: url(../Asset/Images/IMG-20250715-WA0145.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(4) {
-    background-image:url(../Asset/Images/IMG-20250718-WA0061.jpg);
+    background-image: url(../Asset/Images/IMG-20250718-WA0061.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(5) {
-    background-image:url(../Asset/Images/IMG-20250718-WA0062~2.jpg);
+    background-image: url(../Asset/Images/IMG-20250718-WA0062~2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .section-3>div div:nth-child(6) {
-    background-image:url(../Asset/Images/IMG-20250718-WA0067.jpg);
+    background-image: url(../Asset/Images/IMG-20250718-WA0067.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -398,6 +433,7 @@ section.section-4>div .carousel:nth-child(1) .review-image {
     background-position: center;
     border-radius: 30px;
 }
+
 section.section-4>div .carousel:nth-child(2) .review-image {
     width: 100%;
     height: 60vh;
@@ -408,6 +444,7 @@ section.section-4>div .carousel:nth-child(2) .review-image {
     background-position: center;
     border-radius: 30px;
 }
+
 section.section-4>div .carousel:nth-child(3) .review-image {
     width: 100%;
     height: 60vh;
@@ -437,9 +474,14 @@ section.section-4>div .review-info div i {
 }
 
 /* section-5 styling*/
-section.section-5{
+section.section-5 {
     background-color: var(--yellow-bg);
+    background-image: url(../Asset/Images/avinash-kumar-u3B4oNyXYXE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
 section.section-5>div {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -469,7 +511,7 @@ button {
 
 label {
     font-size: 2.4vmin;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 section.section-5 input,
@@ -594,12 +636,16 @@ h4 {
     .small-screen-nav {
         display: block;
     }
+
     nav ul li {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-nav>a{
-width: 40vmin;}
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    nav>a {
+        width: 40vmin;
+    }
+
     /* Navbar menu styling */
     .navbar-menu {
         z-index: 1;
@@ -609,6 +655,10 @@ width: 40vmin;}
         top: 0;
         left: 0;
         background-color: #f1f1f1;
+        background-image: url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         box-shadow: 2px 2px 4px rgb(15 54 55 / 10%);
         transition: all 0.6s ease-in-out;
         padding: 20% 0;
@@ -634,15 +684,18 @@ width: 40vmin;}
     .navbar-toggle i {
         font-size: 5vmin;
         font-weight: 600;
-        color: var(--black);
+        color: var(--white);
     }
 
     .navbar-toggle .fa-xmark {
         display: none;
     }
+
     .un-active {
         display: none !important;
-    }.active {
+    }
+
+    .active {
         display: block !important;
     }
 
@@ -694,12 +747,16 @@ width: 40vmin;}
     section.hero>div {
         width: 100%;
     }
-    section{
+
+    section {
         padding: 12% 8%;
     }
-    nav>a{
-width: 40vmin;}
-        .navbar-toggle i {
+
+    nav>a {
+        width: 40vmin;
+    }
+
+    .navbar-toggle i {
         font-size: 6vmin;
     }
 
@@ -728,6 +785,61 @@ width: 40vmin;}
 }
 
 @media(max-width:425px) {
+    section {
+        padding-top: 30% !important;
+        padding-bottom: 30% !important;
+        transition: 3s;
+    }
+
+    /* font size */
+    section>h3 {
+        font-size: 5vmin;
+    }
+
+    section.hero h1,
+    section.section-2>div div i {
+        font-size: 10vmin;
+    }
+
+    p,
+    section.section-2>div div a,
+    nav ul li a,
+    section.hero>div>div a i {
+        font-size: 4vmin !important;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: 6.5vmin;
+    }
+
+    section.section-5>div .contact-info h2 {
+        font-size: 9vmin;
+    }
+
+    label {
+        font-size: 3.5vmin;
+    }
+
+    section.section-5 input,
+    section.section-5 select,
+    section.section-5 textarea {
+        font-size: 3.1vmin;
+    }
+
+    section.section-5 button {
+        font-size: 3.5vmin;
+    }
+
+    .footer>div ul li a,
+    h4 {
+        font-size: 3.5vmin;
+    }
+
+    .review-image {
+        height: 50vh !important;
+    }
+
     section.hero>div {
         width: 100%;
         gap: 0.5rem;
@@ -747,6 +859,7 @@ width: 40vmin;}
         width: 9vmin;
         height: 9vmin;
     }
+
     section.section-4>div {
         padding: 20% 0;
     }
