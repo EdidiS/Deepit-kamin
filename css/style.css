@@ -6,7 +6,26 @@
     /* scroll-padding: 10rem; */
     font-family: montserrat;
     font-weight: 500;
+    transition: .2s ease-in-out;
 }
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translateY(0); /* Image is at its original position */
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); /* Natural bounce easing */
+    }
+    40%, 43% {
+      transform: translateY(-30px); /* Image moves upwards */
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); /* Faster ascent */
+    }
+    70% {
+      transform: translateY(-15px); /* Image moves slightly upwards again */
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    }
+    90% {
+      transform: translateY(-4px); /* Small upward bounce */
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    }
+  }
 
 h1,
 h2,
@@ -19,8 +38,8 @@ span {
 }
 
 span {
-    padding: 4rem 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../Asset/Images/vecteezy_vibrant-mustard-splat-on-a-clean-transparent-background_55450369.png);
+    padding: 2rem 0;
+    background-image:  url(../Asset/Images/vecteezy_vibrant-mustard-splat-on-a-clean-transparent-background_55450369.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -51,7 +70,7 @@ html {
     --yellow: rgb(255, 249, 136);
     --yellow-bg: rgba(255, 249, 136, 0.5);
     --black: rgb(23, 23, 23);
-    --white: rgb(248, 248, 248);
+    --white: rgba(244, 244, 244, 0.9);
     --orange: orangered;
     /* Fonts */
     --tiktok: "TikTok Sans", sans-serif;
@@ -116,18 +135,32 @@ nav {
     color: var(--black);
     z-index: 1;
     position: fixed;
-    background-image: url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5ms ease-in-out;
+}
+.newNav{
+    background-image:url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    align-items: center;
-    justify-content: space-between;
+    transition: 0.5ms ease-in-out;
 }
-
 /* logo styling */
-nav>a {
-    width: 30vmin;
+.logo {
+    width: 7vmin !important;
     z-index: 1000;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: var(--white);
+}
+footer .logo{
+    color: var(--black);
+}
+.logo p{
+    font-size:3vmin;
+    font-weight: 900;
 }
 
 nav ul {
@@ -137,7 +170,6 @@ nav ul {
 }
 
 nav ul li {
-    border-bottom: 2px solid transparent;
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
@@ -145,15 +177,13 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 2.5vmin;
-    padding-top: 3rem;
-    padding-bottom: 2.9rem;
     font-weight: 600;
     color: var(--white);
 }
 
 nav ul a:hover {
-    border-bottom: 5px solid var(--white);
-    color: var(--white);
+    border-bottom: 5px solid var(--yellow);
+    color: var(--yellow);
 }
 
 .small-screen-nav,
@@ -196,8 +226,8 @@ section.hero>div>div a i,
     font-size: 2.5vmin;
 }
 
-section.hero>div>div i:hover,
-.footer .flex-3 div i:hover {
+section.hero>div>div a:hover section.hero>div>div a ,
+.footer .flex-3 div a:hover .footer .flex-3 div a i {
     color: var(--yellow);
 }
 
@@ -215,6 +245,7 @@ div.icon a,
 
 section.hero img {
     display: none;
+    animation: bounce 4s infinite; /* Apply 'bounce' animation, 2 seconds duration, repeat infinitely */
 }
 
 /* section-2 styling */
@@ -272,15 +303,25 @@ section.section-2>div div a {
 }
 
 section.section-2>div div a:hover {
-    color: var(--white);
+    background: var(--yellow);
+    color: var(--black);
+    border: transparent;
 }
 
 /* section-3 styling */
-
+.section-3>div{
+    margin-top: 5vmin !important;
+}
 .section-3>div div {
     height: 70vmin;
     border-radius: 20px;
     box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.5);
+    /* transition: transform 0.3s ease-in-out; */
+}
+
+.section-3>div div:hover{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
 }
 
 section#portfolio {
@@ -487,6 +528,8 @@ section.section-5>div {
     grid-template-columns: 1fr 1.5fr;
     gap: 5rem;
     align-items: center;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 section.section-5>div .contact-info {
@@ -510,7 +553,7 @@ button {
 }
 
 label {
-    font-size: 2.4vmin;
+    font-size: 2.6vmin;
     font-weight: 700;
 }
 
@@ -522,7 +565,7 @@ section.section-5 button {
     padding: 2.5vmin;
     margin-bottom: 4vmin;
     outline: none;
-    font-size: 2vmin;
+    font-size: 2.4vmin;
     border: 2px solid rgb(144, 144, 144);
     border-radius: 10px;
 }
@@ -540,7 +583,7 @@ section.section-5 button {
     color: var(--white);
     transition: all 0.6s ease-in-out;
     font-weight: 600;
-    font-size: 2.5vmin;
+    font-size: 2.6vmin;
     border: 3px solid transparent;
     cursor: pointer;
 }
@@ -592,7 +635,7 @@ section.section-5 button:hover {
 
 .footer>div ul li a {
     text-decoration: none;
-    font-size: 2.5vmin;
+    font-size: 2.6vmin;
     /* font-weight: 600; */
     color: var(--black);
 }
@@ -602,13 +645,13 @@ section.section-5 button:hover {
 }
 
 h4 {
-    font-size: 2.5vmin;
+    font-size: 2.6vmin;
 }
 
 .copyright {
     background-color: var(--black);
     color: var(--white);
-    padding: 3rem 0;
+    padding: 5vmin 0;
     text-align: center;
 }
 
@@ -804,8 +847,9 @@ h4 {
     p,
     section.section-2>div div a,
     nav ul li a,
-    section.hero>div>div a i {
-        font-size: 4vmin !important;
+    section.hero>div>div a i ,
+    .footer .flex-3 div a i{
+        font-size: 4.1vmin !important;
         line-height: 1.5;
     }
 
@@ -818,26 +862,26 @@ h4 {
     }
 
     label {
-        font-size: 3.5vmin;
+        font-size: 4.1vmin;
     }
 
     section.section-5 input,
     section.section-5 select,
     section.section-5 textarea {
-        font-size: 3.1vmin;
+        font-size: 3.4vmin;
     }
 
     section.section-5 button {
-        font-size: 3.5vmin;
+        font-size: 4.1vmin;
     }
 
     .footer>div ul li a,
     h4 {
-        font-size: 3.5vmin;
+        font-size: 4.1vmin;
     }
 
     .review-image {
-        height: 50vh !important;
+        height: 45vh !important;
     }
 
     section.hero>div {
@@ -862,5 +906,8 @@ h4 {
 
     section.section-4>div {
         padding: 20% 0;
+    }
+    .copyright{
+        padding: 5vmin 0 !important;
     }
 }
