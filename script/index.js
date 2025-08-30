@@ -14,8 +14,8 @@ navbarToggle.addEventListener('click', function () {
 })
 window.addEventListener('scroll', () => {
     nav.classList.toggle('newNav', window.scrollY > 0);
-    navbarMenu.classList.remove('active-toggle');
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.navbar-menu a');
 
