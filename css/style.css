@@ -115,7 +115,7 @@ p {
 }
 
 header {
-    background-color: var(--white);
+    background-color: rgb(12, 12, 12);
     background-image: url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -196,6 +196,7 @@ section.hero {
     top: 4.007rem;
     position: relative;
     padding: 10% 8% 15% 8%;
+    background-color: rgb(12, 12, 12);
     background-image: url(../Asset/Images/vecteezy_vibrant-rainbow-paint-explosion-colorful-splashes-liquid_59048174.png);
     background-size: contain;
     background-position: right;
@@ -268,6 +269,7 @@ section.section-2>div {
 section.section-2>div div {
     padding: 20% 10%;
     background-color: var(--black);
+    background-color: rgb(12, 12, 12);
     background-image: url(../Asset/Images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg);
     background-size: cover;
     background-position: center;
